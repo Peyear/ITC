@@ -30,9 +30,9 @@ If there is no file for correction or if data has already been corrected delete 
 Example: Delete=1
 
 6. Lines 18-20. Set the concentration of the compound in the syringe in Clipid; concentration of lipid in cell in Cdrug; and volume of cell in Vw.
-Example: Clipid=15e-3
-Cdrug=100e-6
-Vw=200e-6
+Example: Clipid=15e-3  	% M
+Cdrug=100e-6		% M
+Vw=200e-6		% L
 
 7. Confirm values in lines 22-28
 
@@ -58,9 +58,9 @@ If there is no file for correction or if data has already been corrected delete 
 Example: Delete=1
 
 6. Lines 9-11. Set the concentration of the compound in the syringe in Clipid; concentration of lipid in cell in Cdrug; and volume of cell in Vw.
-Example: Clipid=15e-3
-Cdrug=100e-6
-Vw=200e-6
+Example: Clipid=15e-3  	% M
+Cdrug=100e-6		% M
+Vw=200e-6		% L
 
 7. Confirm values in lines 17-23
 
