@@ -52,7 +52,8 @@ Example: ITC=xlsread('Data7.xls')
 
 4. Line 5. Select the background experiment file for heat of dilution and blank effects between the ‘—'
 Example: ITC2=xlsread('Data1.xls') 
-If there is no file for correction or if data has already been corrected delete lines 36-44
+If there is no file for correction or if data has already been corrected the leave blank
+Example: ITC2=xlsread('') 
 
 5. Line 7. Select the number of points to delete (often it’s the first injection)
 Example: Delete=1

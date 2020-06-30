@@ -2,7 +2,10 @@ clc;close all;clear all;
 cd('H:\Articles\SoftwareX ITC\ITC-master'); % Files Location
 
 ITC=xlsread('Data7.xls');
-ITC2=xlsread('Data1.xls');
+try
+    ITC2=xlsread('Data1.xls');
+catch
+end
 
 Delete_=1;                              %Number of initial points to delete
 
@@ -33,15 +36,18 @@ x=[1:1:number_of_injection-(Delete_+1)]';
 heat=ITC([(Delete_+1):1:number_of_injection-1],1);
 Vinj=Vinj(end-1);
 
-number_of_injection2=size(ITC2,1);
-heat2=ITC2([(Delete_+1):1:number_of_injection2-1],1);
-if size(heat,1)>size(heat2,1)
-    A=zeros(1,abs(size(heat,1)-size(heat2,1)));
-    heat2=[heat2;A'];
-elseif size(heat,1)<size(heat2,1)
-    heat2=heat2(1:size(heat,1))
+try
+    number_of_injection2=size(ITC2,1);
+    heat2=ITC2([(Delete_+1):1:number_of_injection2-1],1);
+    if size(heat,1)>size(heat2,1)
+        A=zeros(1,abs(size(heat,1)-size(heat2,1)));
+        heat2=[heat2;A'];
+    elseif size(heat,1)<size(heat2,1)
+        heat2=heat2(1:size(heat,1))
+    end
+    heat=heat-heat2;
+catch
 end
-heat=heat-heat2;
 
 Kp=1;dH=heat(1)*T;
 dHeat=[0 heat(1)*inf];
