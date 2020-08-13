@@ -3,6 +3,9 @@
 
 Measuring the partitioning of neutral and charged compounds into large unilamellar vesicles (LUVs). Data for ITC experiments are stored in Excel files (.xls,.xslx,.csv) and script uses the heat in the first column and injection volume in the second column.
 
+ITC_GUI_final.py
+By Isaac Nathoo. Run as is.
+
 ITC_Charged.py
 
 Before you begin make sure following packages are installed
@@ -19,14 +22,14 @@ Astropy
 2. Line 9. Set directory os.chdir(r'%%%') and replace %%% with the directory
 Example: os.chdir(r'H:\Data\ITC') 
 
-3. Line 10. Select the experiment file between the ‘—'
+3. Line 10. Select the experiment file between the â€˜â€”'
 Example: dlsFile='Data7.xls' 
 
-4. Line 11. Select the background experiment file for heat of dilution and blank effects between the ‘—'
+4. Line 11. Select the background experiment file for heat of dilution and blank effects between the â€˜â€”'
 Example: dlsFile2='Data1.xls' 
 If there is no file for correction or if data has already been corrected delete lines 60-73
 
-5. Line 13. Select the number of points to delete (often it’s the first injection)
+5. Line 13. Select the number of points to delete (often itâ€™s the first injection)
 Example: Delete=1
 
 6. Lines 18-20. Set the concentration of the compound in the syringe in Clipid; concentration of lipid in cell in Cdrug; and volume of cell in Vw.
@@ -47,15 +50,15 @@ ITC_Charged.m
 2. Line 2. Set directory cd('%%%'); and replace %%% with the directory
 Example: cd('H:\Data\ITC') 
 
-3. Line 4. Select the experiment file between the ‘—'
+3. Line 4. Select the experiment file between the â€˜â€”'
 Example: ITC=xlsread('Data7.xls') 
 
-4. Line 5. Select the background experiment file for heat of dilution and blank effects between the ‘—'
+4. Line 5. Select the background experiment file for heat of dilution and blank effects between the â€˜â€”'
 Example: ITC2=xlsread('Data1.xls') 
 If there is no file for correction or if data has already been corrected the leave blank
 Example: ITC2=xlsread('') 
 
-5. Line 7. Select the number of points to delete (often it’s the first injection)
+5. Line 7. Select the number of points to delete (often itâ€™s the first injection)
 Example: Delete=1
 
 6. Lines 9-11. Set the concentration of the compound in the syringe in Clipid; concentration of lipid in cell in Cdrug; and volume of cell in Vw.
